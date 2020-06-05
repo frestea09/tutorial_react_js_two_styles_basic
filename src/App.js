@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React from 'react'
+import './Component/css/belajar_styles.css'
+import Content from './Component/Content'
+class App extends React.Component{
+  constructor(){
+    super()
+    this.state = {
+      threshold : true,
+    }
+  }
+  render(){
+    return(
+      <div className='App'>
+        <div className='jumbotron jumbotron-fluid'>
+          <div className='container'>
+            <h1 className='display-4'>Ilman ganteng</h1>
+          </div>
+        </div>
+        <h3>Hello World</h3>
+        <p>ini paragraph</p>
+        <button className='btn btn-success'>Ini tombol</button>
+        <ul>
+          <li id='pertama'>Pertama</li>
+          <li id='kedua'>Kedua</li>
+          <li id='ketiga'>Ketiga</li>
+        </ul>
+        <Content kebenaran = {this.state.threshold}/>
+      </div>
+    )
+  }
 }
-
-export default App;
+export default App
